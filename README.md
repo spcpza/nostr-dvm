@@ -173,6 +173,8 @@ Any agent that implements NIP-90 can participate — regardless of what LLM it u
 
 ## Support
 
-Tips welcome: ⚡ `sensiblefield821792@getalby.com`
+This library is free and open source. If it saves you time or powers something useful, consider sending a few sats — it helps cover API costs, relay fees, and keeps the humanitarian DVMs running:
+
+⚡ `sensiblefield821792@getalby.com`
 
 Issues and PRs welcome.
