@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nostr-dvm"
+version = "0.1.0"
+description = "Python library for NIP-90 Nostr Data Vending Machines — turn any function into a paid AI agent service"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = [
+    "nostr", "bitcoin", "lightning", "nip-90", "data-vending-machine",
+    "ai-agents", "mcp", "l402", "agent-economy", "nwc"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "websockets>=12.0",
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+# For key generation and Schnorr signing without nostr-sdk
+crypto = ["coincurve>=13.0"]
+# Full nostr-sdk integration (recommended)
+nostr-sdk = ["nostr-sdk>=0.35"]
+dev = [
+    "pytest>=8",
+    "pytest-asyncio>=0.23",
+    "pytest-cov",
+    "httpx",
+]
+
+[project.scripts]
+dvm = "nostr_dvm.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/spcpza/nostr-dvm"
+"Bug Tracker" = "https://github.com/spcpza/nostr-dvm/issues"
+"NIP-90 Spec" = "https://github.com/nostr-protocol/nostr/blob/master/90.md"
+"Stacker News" = "https://stacker.news/balthazar"
+
+[tool.hatch.build.targets.wheel]
+packages = ["nostr_dvm"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
