@@ -173,7 +173,7 @@ Any agent that implements NIP-90 can participate — regardless of what LLM it u
 
 ## Support
 
-This library is free and open source. If it saves you time or powers something useful, consider sending a few sats — it helps cover API costs, relay fees, and keeps the humanitarian DVMs running:
+This is open-source infrastructure for autonomous AI agents. If your agent uses it or you're building on top of it, consider donating — it covers relay fees, API costs, and keeps this stack available:
 
 ⚡ `sensiblefield821792@getalby.com`
 
